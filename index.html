@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhão de Lixo - Nunca mais perca a coleta!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            margin: 15px 0;
+            color: #28a745;
+        }
+        
+        .emoji-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .signup {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #e9ecef;
+        }
+        
+        .signup h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .signup p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .email-form input {
+            width: 70%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        
+        .email-form button {
+            width: 30%;
+            padding: 12px;
+            font-size: 1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .email-form button:hover {
+            background-color: #218838;
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .email-form input, .email-form button {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Caminhão de Lixo</h1>
+            <p>Nunca mais perca o dia da coleta!</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Saiba exatamente quando o caminhão de lixo vai passar na sua rua</h2>
+            <p>Um aplicativo simples que te avisa sobre os dias de coleta de lixo na sua região, baseado na sua localização.</p>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Como funciona</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="emoji-icon">📱</div>
+                    <h3>Fácil de usar</h3>
+                    <p>Interface simples e intuitiva que mostra exatamente o que você precisa saber.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji-icon">🗺️</div>
+                    <h3>Baseado na sua localização</h3>
+                    <p>Descubra os dias e horários de coleta específicos para o seu endereço.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji-icon">🔔</div>
+                    <h3>Receba notificações</h3>
+                    <p>Seja avisado com antecedência para nunca mais perder o dia da coleta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="signup">
+        <div class="container">
+            <h2>Seja o primeiro a saber</h2>
+            <p>Nosso aplicativo está em desenvolvimento. Cadastre seu e-mail para ser notificado quando estiver disponível.</p>
+            <div class="email-form">
+                <form id="signup-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Caminhão de Lixo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Código simples para salvar emails (você precisará integrar com um serviço real)
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert('Obrigado por se cadastrar! Enviaremos novidades para: ' + email);
+            this.reset();
+            
+            // Aqui você pode adicionar código para salvar o email (Firebase, API, etc.)
+        });
+    </script>
+</body>
+</html>
