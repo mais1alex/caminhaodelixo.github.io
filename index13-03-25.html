@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-4419241852816398">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saiba exatamente quando o caminhão de lixo passa na sua rua. Nunca mais perca a coleta!">
+    <meta name="keywords" content="caminhão de lixo, coleta de lixo, horários de coleta, resíduos, reciclagem">
+    <meta name="author" content="Caminhão de Lixo">
+    <title>Caminhão de Lixo - Nunca mais perca a coleta!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #34A853;
+            --primary-dark: #2E8B57;
+            --secondary-color: #f4f7f6;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #fff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMCBMMTAwIDEwMCBNMCAxMDAgTDEwMCAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        header p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0;
+            text-align: center;
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: var(--white);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            max-width: 900px;
+            line-height: 1.3;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: var(--text-light);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .app-demo {
+            position: relative;
+            z-index: 2;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-top: 40px;
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .app-demo-inner {
+            border: 2px dashed var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .app-demo h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .app-image {
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--text-light);
+        }
+        
+        .features {
+            padding: 100px 0;
+            background-color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .features h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            margin: 20px 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .emoji-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background-color: rgba(52, 168, 83, 0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+        }
+        
+        .benefits {
+            padding: 100px 0;
+            background-color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .benefits::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: var(--secondary-color);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 20px;
+            z-index: 2;
+        }
+        
+        .benefits h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .benefits-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .benefit-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            box-shadow: var(--shadow);
+        }
+        
+        .benefit-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            opacity: 0.3;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .benefit-item p {
+            color: var(--text-light);
+        }
+        
+        .signup {
+            padding: 100px 0;
+            text-align: center;
+            background-color: var(--white);
+            position: relative;
+        }
+        
+        .signup h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .signup p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-light);
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 20px rgba(52, 168, 83, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(52, 168, 83, 0.4);
+        }
+        
+        footer {
+            background-color: #222;
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p {
+                font-size: 1.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .features h2, .benefits h2, .signup h2 {
+                font-size: 2rem;
+            }
+            
+            .app-demo-inner {
+                padding: 20px;
+            }
+            
+            .feature-card, .benefit-item {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4419241852816398"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Caminhão de Lixo</h1>
+            <p>A solução definitiva para nunca mais perder o dia da coleta de resíduos na sua região</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Saiba exatamente quando o caminhão de lixo passa na sua rua</h2>
+            <p>Um aplicativo inteligente que mapeia os horários de coleta de lixo em sua região, enviando lembretes personalizados para que você nunca mais se esqueça de colocar seus resíduos para fora.</p>
+            
+            <div class="app-demo">
+                <div class="app-demo-inner">
+                    <h3>Prévia do App</h3>
+                    <div class="app-image">Demonstração do App em Breve</div>
+                    <p>Estamos desenvolvendo uma interface intuitiva que vai revolucionar a forma como você gerencia seus resíduos domésticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Como funciona</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="emoji-icon">📱</div>
+                    <h3>Interface Intuitiva</h3>
+                    <p>Design simplificado que permite visualizar facilmente os dias e horários de coleta em sua região, com código de cores para diferentes tipos de coleta (orgânico, reciclável, etc).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji-icon">🗺️</div>
+                    <h3>Localização Precisa</h3>
+                    <p>Utilizando geolocalização avançada, o app identifica sua localização exata e fornece informações específicas sobre a coleta de lixo na sua rua, com dados atualizados constantemente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji-icon">🔔</div>
+                    <h3>Notificações Personalizadas</h3>
+                    <p>Configure alertas personalizados para receber lembretes no dia anterior à coleta, permitindo que você programe com antecedência quando colocar seu lixo na rua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2>Benefícios do Aplicativo</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h3>Economia de Tempo</h3>
+                    <p>Acabe com a incerteza sobre os dias de coleta e evite ficar esperando pelo caminhão ou deixar seu lixo exposto por dias.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h3>Impacto Ambiental</h3>
+                    <p>Contribua para uma cidade mais limpa e organizada, garantindo que seus resíduos sejam coletados no momento certo.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h3>Dados Confiáveis</h3>
+                    <p>Informações verificadas e atualizadas diretamente das fontes oficiais municipais e empresas de coleta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="signup">
+        <div class="container">
+            <h2>Seja parte desta revolução urbana</h2>
+            <p>Nosso aplicativo está em fase de desenvolvimento. Estamos trabalhando para trazer a melhor experiência possível para usuários em todo o Brasil. Entre em contato para saber mais ou contribuir com o projeto.</p>
+            <a href="https://github.com/mais1alex" class="contact-button">Contato via GitHub</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Caminhão de Lixo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JHH5XTN3K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JHH5XTN3K');
+</script>
+<script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/66a77ca2f29b4.js" data-cmp-host="b.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+</body>
+</html>
