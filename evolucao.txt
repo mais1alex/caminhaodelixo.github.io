@@ -1,0 +1,2 @@
+Evolução
+  13-03-2025 - removi o conteudo desnecessário do index.html, pois parei com o projeto anterior.
