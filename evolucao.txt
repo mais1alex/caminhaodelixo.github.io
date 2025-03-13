@@ -1,2 +1,2 @@
 Evolução
-  13-03-2025 - removi o conteudo desnecessário do index.html, pois parei com o projeto anterior.
+  13-03-2025 - removi o conteudo desnecessário do index.html, pois parei com o projeto anterior. Antes criei uma cópia do index.html e renomeei para index13-03-25.html, por enquanto sigo assim no controle de versão e registro de progresso.
